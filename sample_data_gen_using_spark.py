@@ -70,7 +70,7 @@ groups_df.write.format("parquet").mode("append").save(
 # Convert Parquet files to Delta format
 # appending for the scope of assignment
 users_df.write.format("delta").mode("append").save(os.path.join(users_path, "delta"))
-users_df.write.format("delta").mode("append").save(os.path.join(groups_path, "delta"))
+groups_df.write.format("delta").mode("append").save(os.path.join(groups_path, "delta"))
 
 # Stop SparkSession
 spark.stop()
